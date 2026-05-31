@@ -1,0 +1,37 @@
+restaurant-online/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── fonts/
+│   └── images/
+│       └── foods/         (تصاویر غذاها اینجا آپلود می‌شوند)
+├── config/
+│   └── database.php       (تنظیمات اتصال به دیتابیس)
+├── includes/
+│   ├── header.php         (هدر مشترک)
+│   ├── footer.php         (فوتر مشترک)
+│   ├── header_admin.php         (هدر ادمین)
+│   └── functions.php      (توابع کمکی)
+├── admin/                 (پوشه پنل ادمین)
+│   ├── dashboard.php
+│   ├── foods.php
+│   ├── categories.php
+│   ├── orders.php
+│   ├── users.php
+│   └── reviews.php
+├── user/                  (پوشه پنل کاربر)
+│   ├── dashboard.php
+│   ├── profile.php
+│   ├── orders.php
+│   └── reviews.php
+├── main/
+│   ├── menu.php               (صفحه دسته‌بندی غذاها)
+│   ├── food-detail.php        (جزئیات غذا)
+│   ├── cart.php               (سبد خرید)
+│   ├── about.php
+│   └── checkout.php
+├── authentication/
+│   ├── login.php
+│   ├── signup.php
+│   ├── logout.php
+├── index.php              (صفحه خوش‌آمدگویی یا اصلی)

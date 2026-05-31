@@ -1,0 +1,475 @@
+-- ادمین اصلی
+INSERT INTO users (full_name, email, phone, password, role) VALUES
+('علیرضا محمدی', 'admin@restaurant.com', '09120001111', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+
+-- کاربران عادی
+INSERT INTO users (full_name, email, phone, password, role) VALUES
+('سارا احمدی', 'sara.ahmadi@email.com', '09121112233', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('امیررضا حسینی', 'amir.hosseini@email.com', '09123334455', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('نرگس رضایی', 'narges.rezaei@email.com', '09125556677', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('پدرام کریمی', 'pedram.karimi@email.com', '09127778899', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('مریم قاسمی', 'maryam.ghasemi@email.com', '09128889900', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('دانیال موسوی', 'danial.mousavi@email.com', '09129990011', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('الهه طاهری', 'elahe.taheri@email.com', '09130001122', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('سهیل نوری', 'soheil.nouri@email.com', '09131112233', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('غزل محمدپور', 'ghazal.mohammadpour@email.com', '09132223344', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('فرشاد رحمانی', 'farshad.rahmani@email.com', '09133334455', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('آیدا صادقی', 'aida.sadeghi@email.com', '09134445566', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('میلاد اکبری', 'milad.akbari@email.com', '09135556677', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('بهار مرادی', 'bahar.moradi@email.com', '09136667788', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('کسری ملکی', 'kasra.maleki@email.com', '09137778899', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('رویا فلاحی', 'roya.falahi@email.com', '09138889900', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('احسان یوسفی', 'ehsan.yousefi@email.com', '09139990011', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('ترانه ناصری', 'taraneh.naseri@email.com', '09140001122', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('شایان هاشمی', 'shayan.hashemi@email.com', '09141112233', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user'),
+('سپیده گلزار', 'sepideh.golzar@email.com', '09142223344', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user');
+
+-- 1️⃣ نوشیدنی‌ها
+INSERT INTO categories (name, description, image) VALUES
+('نوشیدنی‌ها', 'انواع نوشیدنی‌های گرم و سرد شامل نوشابه، دوغ، آبمیوه، شربت، قهوه و چای', 'drinks.jpg');
+
+-- 2️⃣ مخلفات و ترشیجات
+INSERT INTO categories (name, description, image) VALUES
+('مخلفات و ترشیجات', 'انواع سالاد، ترشی، زیتون، ماست موسیر، ماست خیار، شور و سایر مخلفات', 'sides.jpg');
+
+-- 3️⃣ غذاهای ایرانی (خورشت و پلو)
+INSERT INTO categories (name, description, image) VALUES
+('غذاهای ایرانی', 'انواع خورشت‌های اصیل ایرانی مانند قورمه‌سبزی، قیمه، فسنجان به همراه پلو و چلو', 'persian_foods.jpg');
+
+-- 4️⃣ کباب‌ها
+INSERT INTO categories (name, description, image) VALUES
+('کباب‌ها', 'انواع کباب‌های ایرانی شامل کباب کوبیده، برگ، جوجه‌کباب، شیشلیک و بختیاری', 'kababs.jpg');
+
+🥤 دسته‌بندی ۱: نوشیدنی‌ها (category_id = 1)
+INSERT INTO foods (category_id, name, description, price, image, is_available) VALUES
+(1, 'دوغ گازدار', 'دوغ گازدار سنتی ایرانی در بطری ۱.۵ لیتری', 35000, 'doogh.jpg', TRUE),
+(1, 'نوشابه کوکاکولا', 'قوطی ۳۳۰ میلی‌لیتری کوکاکولا', 28000, 'coca_cola.jpg', TRUE),
+(1, 'نوشابه فانتا', 'قوطی ۳۳۰ میلی‌لیتری فانتا پرتقالی', 28000, 'fanta.jpg', TRUE),
+(1, 'آبمیوه پرتقال طبیعی', 'آب پرتقال تازه و طبیعی ۳۰۰ میلی‌لیتری', 55000, 'orange_juice.jpg', TRUE),
+(1, 'شربت آلبالو', 'شربت آلبالوی خانگی با یخ ۴۰۰ میلی‌لیتری', 40000, 'sour_cherry_syrup.jpg', TRUE),
+(1, 'شربت لیموناد', 'لیموناد تازه با نعناع و لیمو ۴۰۰ میلی‌لیتری', 42000, 'lemonade.jpg', TRUE),
+(1, 'اسپرسو', 'یک شات اسپرسوی داغ و قوی', 45000, 'espresso.jpg', TRUE),
+(1, 'لاته', 'قهوه لاته با شیر بخارپز شده ۲۵۰ میلی‌لیتری', 65000, 'latte.jpg', TRUE),
+(1, 'کاپوچینو', 'قهوه کاپوچینو با فوم شیر و پودر کاکائو', 60000, 'cappuccino.jpg', TRUE),
+(1, 'چای سیاه', 'چای سیاه ایرانی تازه‌دم با نبات', 25000, 'black_tea.jpg', TRUE),
+(1, 'چای ماسالا', 'چای ماسالای هندی با ادویه و شیر ۳۰۰ میلی‌لیتری', 70000, 'masala_tea.jpg', TRUE),
+(1, 'آب معدنی', 'بطری ۵۰۰ میلی‌لیتری آب معدنی', 15000, 'mineral_water.jpg', TRUE);
+
+🥗 دسته‌بندی ۲: مخلفات و ترشیجات (category_id = 2)
+INSERT INTO foods (category_id, name, description, price, image, is_available) VALUES
+(2, 'سالاد شیرازی', 'خیار، گوجه، پیاز ریز خرد شده با آبغوره و نعنا', 35000, 'shirazi_salad.jpg', TRUE),
+(2, 'سالاد کاهو', 'کاهو، گوجه، خیار، هویج با سس مخصوص', 40000, 'lettuce_salad.jpg', TRUE),
+(2, 'سالاد سزار', 'کاهو رومی، کروتون، پارمزان با سس سزار', 65000, 'caesar_salad.jpg', TRUE),
+(2, 'ترشی لیته', 'بادمجان کبابی، سبزیجات معطر با سرکه', 30000, 'liteh_pickle.jpg', TRUE),
+(2, 'ترشی مخلوط', 'گل کلم، خیار، هویج، فلفل، سیر در سرکه', 32000, 'mixed_pickle.jpg', TRUE),
+(2, 'ترشی سیر', 'سیر کامل خوابانده شده در سرکه بالزامیک', 28000, 'garlic_pickle.jpg', TRUE),
+(2, 'زیتون پرورده', 'زیتون سبز با رب انار، سیر، نعنا و گردو', 45000, 'olive_parvardeh.jpg', TRUE),
+(2, 'زیتون شکسته', 'زیتون سبز شکسته با چاشنی مخصوص', 38000, 'cracked_olive.jpg', TRUE),
+(2, 'ماست موسیر', 'ماست پرچرب با موسیر تازه کوهی', 28000, 'mast_mousir.jpg', TRUE),
+(2, 'ماست خیار', 'ماست با خیار رنده شده، کشمش، گردو و نعنا', 30000, 'mast_khiar.jpg', TRUE),
+(2, 'شور گل کلم', 'گل کلم، خیار، هویج در محلول آب‌نمک و سرکه', 25000, 'pickled_cauliflower.jpg', TRUE),
+(2, 'بورانی اسفناج', 'اسفناج پخته با ماست، سیر و پیاز داغ', 35000, 'borani_esfenaj.jpg', TRUE);
+
+🍲 دسته‌بندی ۳: غذاهای ایرانی (category_id = 3)
+INSERT INTO foods (category_id, name, description, price, image, is_available) VALUES
+(3, 'قورمه سبزی با پلو', 'خورشت قورمه سبزی با گوشت گوسفندی، لوبیا قرمز و سبزیجات معطر', 120000, 'ghormeh_sabzi.jpg', TRUE),
+(3, 'قیمه با پلو', 'خورشت قیمه با گوشت، لپه، لیمو عمانی و خلال سیب‌زمینی سرخ‌کرده', 110000, 'gheymeh.jpg', TRUE),
+(3, 'فسنجان با پلو', 'خورشت فسنجان با گردو، رب انار و مرغ (شیرین یا ملس)', 135000, 'fesenjan.jpg', TRUE),
+(3, 'زرشک پلو با مرغ', 'پلو زعفرانی با زرشک و مرغ کامل شکم‌پر', 125000, 'zereshk_polo.jpg', TRUE),
+(3, 'باقالی پلو با ماهیچه', 'پلو باقالی با شوید و ماهیچه گوسفندی', 150000, 'baghali_polo.jpg', TRUE),
+(3, 'لوبیا پلو', 'پلو مخلوط با لوبیا سبز، گوشت چرخ‌کرده و رب گوجه', 95000, 'loobia_polo.jpg', TRUE),
+(3, 'کلم پلو', 'پلو مخلوط با کلم پیچ، سبزیجات معطر و کوفته ریزه', 90000, 'kalam_polo.jpg', TRUE),
+(3, 'سبزی پلو با ماهی', 'سبزی پلو شمالی با ماهی سفید سرخ‌کرده', 140000, 'sabzi_polo.jpg', TRUE),
+(3, 'میرزا قاسمی', 'بادمجان کبابی، گوجه، سیر و تخم‌مرغ (گیلانی)', 85000, 'mirza_ghasemi.jpg', TRUE),
+(3, 'کشک بادمجان', 'بادمجان سرخ‌کرده با کشک، سیر داغ و نعنا داغ', 80000, 'kashk_bademjan.jpg', TRUE),
+(3, 'قیمه بادمجان', 'خورشت قیمه با بادمجان سرخ‌کرده به جای سیب‌زمینی', 115000, 'gheymeh_bademjan.jpg', TRUE),
+(3, 'کوکو سبزی', 'کوکوی سبزیجات معطر با گردو و زرشک', 75000, 'kookoo_sabzi.jpg', TRUE);
+
+🍢 دسته‌بندی ۴: کباب‌ها (category_id = 4)
+INSERT INTO foods (category_id, name, description, price, image, is_available) VALUES
+(4, 'کباب کوبیده', 'سیخ کباب کوبیده مخلوط گوشت گوسفندی و گوساله (۲ سیخ)', 130000, 'kabab_koubideh.jpg', TRUE),
+(4, 'کباب برگ', 'فیله گوساله طعم‌دار شده و کباب شده روی آتش (۱ سیخ)', 180000, 'kabab_barg.jpg', TRUE),
+(4, 'جوجه کباب با استخوان', 'جوجه مرغ مزه‌دار شده با زعفران و لیمو (۲ سیخ)', 120000, 'joojeh_kabab.jpg', TRUE),
+(4, 'جوجه کباب بدون استخوان', 'فیله مرغ گریل شده با سس زعفرانی (۲ سیخ)', 135000, 'boneless_joojeh.jpg', TRUE),
+(4, 'کباب بختیاری', 'ترکیبی از فیله گوساله و جوجه مرغ (۱ سیخ)', 160000, 'bakhtiari_kabab.jpg', TRUE),
+(4, 'شیشلیک', 'دنده گوسفندی مزه‌دار و کباب شده (۲ تکه)', 200000, 'shishlik.jpg', TRUE),
+(4, 'کباب سلطانی', 'ترکیب ۱ سیخ کباب برگ + ۱ سیخ کباب کوبیده', 220000, 'soltani_kabab.jpg', TRUE),
+(4, 'چنجه مرغ', 'تکه‌های مرغ مزه‌دار شده با فلفل و پیاز (۱ سیخ)', 115000, 'chicken_chanjeh.jpg', TRUE),
+(4, 'چنجه گوسفندی', 'تکه‌های گوشت گوسفندی مزه‌دار با ماست و ادویه (۱ سیخ)', 150000, 'lamb_chanjeh.jpg', TRUE),
+(4, 'کباب تابه‌ای', 'کباب تابه‌ای خانگی با گوشت چرخ‌کرده و گوجه', 95000, 'kabab_tabei.jpg', TRUE),
+(4, 'شامی کباب', 'شامی گوشت با نخود و سیب‌زمینی سرخ‌شده (۳ عدد)', 85000, 'shami_kabab.jpg', TRUE),
+(4, 'ماهی کبابی', 'ماهی قزل‌آلا کباب شده با سس لیمو و سیر', 145000, 'grilled_fish.jpg', TRUE);
+
+
+📋 ثبت ۳۰ سفارش
+-- سفارش ۱
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(2, 270000, 'delivered', '2026-04-15 12:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(1, 13, 2, 120000), (1, 1, 1, 35000);
+
+-- سفارش ۲
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(3, 180000, 'delivered', '2026-04-16 18:45:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(2, 37, 1, 180000);
+
+-- سفارش ۳
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(4, 430000, 'delivered', '2026-04-17 13:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(3, 41, 1, 220000), (3, 9, 2, 65000), (3, 21, 2, 35000);
+
+-- سفارش ۴
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(5, 125000, 'cancelled', '2026-04-18 20:15:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(4, 16, 1, 125000);
+
+-- سفارش ۵
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(6, 55000, 'delivered', '2026-04-19 11:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(5, 5, 1, 55000);
+
+-- سفارش ۶
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(7, 260000, 'delivered', '2026-04-20 19:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(6, 37, 1, 130000), (6, 38, 1, 130000);
+
+-- سفارش ۷
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(8, 385000, 'delivered', '2026-04-21 14:45:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(7, 41, 1, 220000), (7, 15, 1, 135000), (7, 21, 1, 30000);
+
+-- سفارش ۸
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(9, 80000, 'delivered', '2026-04-22 12:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(8, 33, 1, 80000);
+
+-- سفارش ۹
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(10, 420000, 'preparing', '2026-04-25 13:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(9, 41, 1, 220000), (9, 42, 1, 200000);
+
+-- سفارش ۱۰
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(11, 175000, 'delivered', '2026-04-23 18:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(10, 13, 1, 120000), (10, 5, 1, 55000);
+
+-- سفارش ۱۱
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(12, 240000, 'delivered', '2026-04-24 20:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(11, 38, 2, 120000);
+
+-- سفارش ۱۲
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(13, 310000, 'confirmed', '2026-04-26 11:15:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(12, 16, 1, 125000), (12, 41, 1, 130000), (12, 2, 2, 28000);
+
+-- سفارش ۱۳
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(14, 150000, 'pending', '2026-05-01 19:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(13, 45, 1, 150000);
+
+-- سفارش ۱۴
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(15, 280000, 'preparing', '2026-04-27 17:45:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(14, 40, 1, 160000), (14, 10, 1, 70000), (14, 9, 1, 50000);
+
+-- سفارش ۱۵
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(16, 99000, 'delivered', '2026-04-28 21:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(15, 29, 1, 14000), (15, 25, 1, 85000);
+
+-- سفارش ۱۶
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(17, 355000, 'confirmed', '2026-04-29 15:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(16, 39, 2, 135000), (16, 22, 1, 65000), (16, 3, 1, 20000);
+
+-- سفارش ۱۷
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(18, 120000, 'delivered', '2026-04-30 13:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(17, 38, 1, 120000);
+
+-- سفارش ۱۸
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(19, 540000, 'preparing', '2026-05-02 12:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(18, 41, 2, 220000), (18, 20, 1, 95000), (18, 6, 1, 5000);
+
+-- سفارش ۱۹
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(20, 200000, 'pending', '2026-05-03 20:45:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(19, 43, 1, 200000);
+
+-- سفارش ۲۰
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(2, 165000, 'delivered', '2026-04-22 14:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(20, 26, 1, 110000), (20, 4, 1, 55000);
+
+-- سفارش ۲۱
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(3, 380000, 'delivered', '2026-04-25 19:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(21, 42, 1, 200000), (21, 37, 1, 180000);
+
+-- سفارش ۲۲
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(4, 145000, 'cancelled', '2026-04-27 11:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(22, 48, 1, 145000);
+
+-- سفارش ۲۳
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(5, 228000, 'delivered', '2026-04-29 16:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(23, 27, 1, 150000), (23, 11, 2, 39000);
+
+-- سفارش ۲۴
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(6, 310000, 'confirmed', '2026-05-01 13:45:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(24, 18, 1, 140000), (24, 24, 1, 115000), (24, 7, 1, 55000);
+
+-- سفارش ۲۵
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(7, 84000, 'delivered', '2026-04-20 12:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(25, 21, 1, 30000), (25, 22, 1, 40000), (25, 1, 1, 14000);
+
+-- سفارش ۲۶
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(8, 400000, 'preparing', '2026-05-02 18:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(26, 41, 1, 220000), (26, 37, 1, 180000);
+
+-- سفارش ۲۷
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(9, 275000, 'pending', '2026-05-04 20:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(27, 14, 1, 135000), (27, 15, 1, 140000);
+
+-- سفارش ۲۸
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(10, 190000, 'delivered', '2026-04-26 14:15:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(28, 30, 1, 90000), (28, 17, 1, 100000);
+
+-- سفارش ۲۹
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(11, 235000, 'confirmed', '2026-05-03 17:30:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(29, 43, 1, 115000), (29, 31, 1, 120000);
+
+-- سفارش ۳۰
+INSERT INTO orders (user_id, total_price, status, order_date) VALUES
+(12, 265000, 'preparing', '2026-05-05 12:00:00');
+INSERT INTO order_items (order_id, food_id, quantity, price_per_unit) VALUES
+(30, 21, 1, 35000), (30, 23, 1, 65000), (30, 31, 1, 95000), (30, 8, 1, 70000);
+
+
+🥤 دسته‌بندی ۱: نوشیدنی‌ها
+-- محصول ۱: دوغ گازدار (food_id = 1) - در سفارشات 1, 25
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(2, 1, 4, 'دوغ گازدار عالی بود و حسابی خنک بود. حجم بطری هم مناسبه.', 'ممنون از نظرتون. خوشحالیم که راضی بودید.', '2026-04-16 10:00:00', 1, TRUE),
+(7, 1, 3, 'دوغ خوبی بود ولی به نظرم یه ذره شورتر از حد معمول بود.', NULL, NULL, NULL, TRUE),
+(7, 1, 5, 'عالی بود، مخصوصا کنار کباب. حتما دوباره سفارش میدم.', 'خوشحالیم که دوست داشتید. منتظر سفارش بعدیتون هستیم.', '2026-04-22 11:00:00', 1, TRUE),
+(2, 1, 3, 'کیفیت همیشگی رو داشت. نه خیلی عالی نه بد.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۲: نوشابه کوکاکولا (food_id = 2) - در سفارشات 12
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(13, 2, 5, 'همیشه عالیه و خنک سرو شد.', 'ممنون از نظرتون. سلامت باشید.', '2026-04-27 12:30:00', 1, TRUE),
+(13, 2, 4, 'نوشابه خنک بود و کیفیت خوبی داشت.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۳: نوشابه فانتا (food_id = 3) - در سفارشات 16
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(16, 3, 5, 'همیشه با غذا فانتا میخورم. خیلی خنک و باکیفیت بود.', 'خوشحالیم که همراه خوبی برای غذاتون بوده.', '2026-05-01 09:15:00', 1, TRUE);
+
+-- محصول ۴: آبمیوه پرتقال طبیعی (food_id = 4) - در سفارشات 20
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(2, 4, 5, 'کاملا مشخص بود که آبمیوه طبیعی و تازه‌ست. قیمتش نسبت به کیفیت عالیه.', 'ممنون از دقت نظرتون. تمام آبمیوه‌ها روزانه تهیه میشن.', '2026-04-23 15:00:00', 1, TRUE),
+(2, 4, 4, 'آب پرتقال خوشمزه و مقوی بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۵: آبمیوه پرتقال طبیعی (food_id = 5) - در سفارشات 5, 10
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(6, 5, 5, 'واقعا طعم آلبالوی تازه میداد و خیلی خوشمزه بود.', 'بله، از آلبالوی تازه استفاده میشه، خوشحالیم که دوست داشتید.', '2026-04-20 10:30:00', 1, TRUE),
+(11, 5, 4, 'شربت آلبالو خنک و دلچسب بود. فقط کاش شیرینیش کمتر بود.', NULL, NULL, NULL, TRUE),
+(6, 5, 3, 'طعم بدی نداشت ولی من انتظار یه چیز خاص‌تر رو داشتم.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۶: شربت لیموناد (food_id = 6) - در سفارشات 18
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(19, 6, 4, 'لیموناد خیلی خوبی بود، طعم نعناع توش کاملا حس میشد.', NULL, NULL, NULL, TRUE),
+(19, 6, 5, 'عالی و بی‌نظیر بود. برای روزای گرم عالیه.', 'موافقم، بهترین انتخاب برای تابستونه.', '2026-05-03 16:45:00', 1, TRUE);
+
+-- محصول ۷: اسپرسو (food_id = 7) - در سفارشات 24
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(7, 7, 5, 'یه اسپرسوی حرفه‌ای و قوی. کاملا مشخصه که باریستا کارش رو بلده.', 'از طرف باریستای ما ازتون تشکر میکنم.', '2026-05-02 14:00:00', 1, TRUE),
+(7, 7, 4, 'اسپرسو تلخ بود، درست همون طوری که دوست دارم.', NULL, NULL, NULL, TRUE),
+
+-- محصول ۸: چای ماسالا (food_id = 8) - در سفارشات 30
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(12, 8, 5, 'چای ماسالاشون یه چیز دیگه‌ست. ادویه‌هاش کاملا حس میشد و شیرش هم متعادل بود.', 'بسیار خوشحالیم که دوست داشتید. دستور پخت خاص خودمون رو داره.', '2026-05-06 13:00:00', 1, TRUE),
+(12, 8, 4, 'خیلی چای گرم و دلنشینی بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۹: لاته (food_id = 9) - در سفارشات 3
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(4, 9, 2, 'لاته‌ای که فرستادید شیرش زیادی سرد شده بود و طعم قهوه هم ضعیف بود.', 'از این بابت متاسفیم. حتما با بخش باریستا مطرح میکنم تا در سفارشات بعدی بهتر عمل کنیم.', '2026-04-18 12:00:00', 1, TRUE);
+
+-- محصول ۱۰: چای ماسالا (food_id = 10) - در سفارشات 14
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(15, 10, 4, 'ماسالای خوبی بود ولی فکر کنم یه کم دارچینش زیاد بود.', NULL, NULL, NULL, TRUE),
+(15, 10, 4, 'برای عصرونه یه چیز عالیه، خوشمزه و مقوی.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۱۱: چای ماسالا (food_id = 11) - در سفارشات 23
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(5, 11, 5, 'حرف نداره. این چای رو با بیسکوئیت مادر بزرگم خوردم کیف کردم.', 'چه ترکیب نوستالژیکی. خوشحالیم که براتون خاطره ساخت.', '2026-04-30 17:00:00', 1, TRUE),
+(5, 11, 3, 'چای ماسالای معمولی بود، توقع یه چیز خاص‌تر رو داشتم.', NULL, NULL, NULL, TRUE),
+(5, 11, 4, 'طعم خوبی داشت و گرمابخش بود.', NULL, NULL, NULL, TRUE);
+
+
+🥗 دسته‌بندی ۲: مخلفات و ترشیجات
+-- محصول ۱۳: سالاد شیرازی (food_id = 13) - در سفارشات 1, 10
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(2, 13, 4, 'سالاد شیرازی کاملا تازه بود و آبغوره خوبی داشت.', 'ممنون از اینکه به تازگی مواد اولیه اشاره کردید.', '2026-04-16 11:00:00', 1, TRUE),
+(11, 13, 5, 'ترش و خوشمزه. به نظر بهترین چاشنی برای غذاست.', NULL, NULL, NULL, TRUE),
+(11, 13, 2, 'سالاد یه کم آبکی شده بود و انگار از صبح مونده بود.', 'از این موضوع عذرخواهی میکنم. حتما پیگیری می‌شود.', '2026-04-24 18:30:00', 1, TRUE);
+
+-- محصول ۱۴: سالاد کاهو (food_id = 14) - در سفارشات 27
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(14, 14, 4, 'کاهو تازه بود و پنیرش هم باکیفیت.', 'خوشحالیم که دوست داشتید.', '2026-05-05 11:00:00', 1, TRUE),
+(14, 14, 2, 'سسش خیلی کم بود، یکم خشک به نظر میرسید.', NULL, NULL, NULL, TRUE),
+(14, 14, 3, 'خوب بود ولی قیمتش یه ذره بالاست.', NULL, NULL, NULL, TRUE),
+(14, 14, 4, 'قبلاً بهتر بود، این دفعه متوسط بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۱۵: سالاد سزار (food_id = 15) - در سفارشات 7, 27
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(8, 15, 4, 'سالاد سزار با سس مخصوصش عالیه، فقط کاش مرغش یکم بیشتر بود.', NULL, NULL, NULL, TRUE),
+(14, 15, 5, 'این سالاد فوق‌العاده‌ست. همیشه از اینجا سفارش میدم.', 'شما لطف دارید، سلامت باشید.', '2026-05-05 12:00:00', 1, TRUE);
+
+-- محصول ۱۶: ترشی لیته (food_id = 16) - در سفارشات 4, 12
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(5, 16, 3, 'ترشی لیته خوب بود، اما به پای ترشی‌های شمال خودمون نمیرسه.', NULL, NULL, NULL, TRUE),
+(13, 16, 5, 'ترشی لیته‌تون بی‌نظیره. طعم بادمجون کبابیش عالیه.', 'مرسی، این تعریف بزرگیه. ما هم عاشق طعم شمالیم.', '2026-04-27 13:00:00', 1, TRUE);
+
+-- محصول ۱۷: ترشی مخلوط (food_id = 17) - در سفارشات 28
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(10, 17, 5, 'ترشی مخلوط کاملاً باکیفیت و ترد. خوشمزه بود.', NULL, NULL, NULL, TRUE),
+(10, 17, 1, 'متاسفانه ترشی که فرستادید کپک زده بود. اصلا قابل خوردن نبود.', 'از این اتفاق به شدت عذرخواهی می‌کنیم. هزینه سفارش رو برگشت می‌زنیم و حتما پیگیری میشه.', '2026-04-27 10:00:00', 1, TRUE);
+
+-- محصول ۲۰: زیتون پرورده (food_id = 20) - در سفارشات 18
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(19, 20, 5, 'زیتون پرورده‌اش رب انارش عالیه، واقعاً شمالی و خوشمزه', 'مخلص شمالیا هم هستیم.', '2026-05-03 17:30:00', 1, TRUE),
+(19, 20, 4, 'رب انار و گردوش کاملاً به اندازه و خوشمزه بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۲۱: ماست موسیر (food_id = 21) - در سفارشات 3, 7, 25, 30
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(4, 21, 5, 'ماست موسیرشون خیلی غلیظ و خوشمزه‌ست.', NULL, NULL, NULL, TRUE),
+(8, 21, 4, 'ماست خوبی بود، موسیر تازه حسابی توش بود.', 'موسیر تازه‌ست. ممنون از توجهتون.', '2026-04-22 09:00:00', 1, TRUE),
+(7, 21, 4, 'همیشه عالیه. یه طعم خاص و خوبی داره.', NULL, NULL, NULL, TRUE),
+(12, 21, 3, 'این دفعه یکم شل بود، ولی طعمش خوب بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۲۲: ماست خیار (food_id = 22) - در سفارشات 16, 25
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(16, 22, 5, 'ماست خیارشون کشمش و گردوی زیادی داشت، خیلی خوشمزه بود.', 'مرسی، همیشه پر از خیر و برکت.', '2026-05-01 10:00:00', 1, TRUE),
+(7, 22, 4, 'خیلی خوشمزه بود، کاملاً به اندازه و خوش‌طعم.', NULL, NULL, NULL, TRUE);
+
+
+🍲 دسته‌بندی ۳: غذاهای ایرانی
+-- محصول ۲۳: سالاد سزار (food_id = 23) - در سفارشات 30
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(12, 23, 5, 'سالاد سزار اینجا بهترینه، مرغ و سس خیلی خوبی داره.', 'ممنون، خوشحالیم که دوستش دارید.', '2026-05-06 14:00:00', 1, TRUE),
+(12, 23, 4, 'سسش فوق‌العاده بود. کاش حجمش یکم بیشتر بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۲۴: قیمه بادمجان (food_id = 24) - در سفارشات 24
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(7, 24, 3, 'قیمه بادمجانش بد نبود ولی گوشتش یکم سفت بود.', 'نظرتون رو به تیم آشپزخانه میرسونیم تا رسیدگی بشه.', '2026-05-02 15:00:00', 1, TRUE);
+
+-- محصول ۲۵: باقالی پلو با ماهیچه (food_id = 25) - در سفارشات 15
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(16, 25, 5, 'باقالی پلو با ماهیچه شون فوق‌العاده بود، ماهیچه به راحتی از استخون جدا شد.', 'از شنیدن این نظر انرژی گرفتیم. متشکریم.', '2026-04-30 09:00:00', 1, TRUE),
+(16, 25, 4, 'برنجش عالی بود، ماهیچه هم خوش‌طعم و نرم پخته شده بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۲۶: قیمه با پلو (food_id = 26) - در سفارشات 20
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(2, 26, 4, 'قیمه جاافتاده و خوشمزه‌ای بود، خلال سیب زمینی هم عالی بود.', NULL, NULL, NULL, TRUE),
+(2, 26, 5, 'این بهترین قیمه‌ای بود که خوردم. واقعا دستتون درد نکنه.', 'خواهش میکنم. نظر لطفتونه.', '2026-04-23 16:00:00', 1, TRUE);
+
+-- محصول ۲۷: باقالی پلو با ماهیچه (food_id = 27) - در سفارشات 23
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(5, 27, 5, 'باقالی پلو با ماهیچه به‌غایت عالی و خوش عطر بود.', NULL, NULL, NULL, TRUE),
+(5, 27, 4, 'کیفیتش فوق‌العاده بود، قیمتش نسبت به کیفیت منصفانه‌ست.', 'سپاسگزاریم.', '2026-04-30 18:00:00', 1, TRUE);
+
+-- محصول ۲۹: سبزی پلو با ماهی (food_id = 29) - در سفارشات 15
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(16, 29, 5, 'ماهی کاملاً تازه بود، برنج هم عطر خوبی داشت.', 'از اینکه تازه بودن رو حس کردید خوشحالیم.', '2026-04-30 09:30:00', 1, TRUE),
+(16, 29, 3, 'سبزی پلو خوب بود ولی ماهی کمی بوی زهم میداد.', 'متاسفانه این موضوع رو شنیدیم. با بخش تدارکات بررسی می‌کنیم.', '2026-04-30 09:35:00', 1, TRUE),
+
+
+🍢 دسته‌بندی ۴: کباب‌ها
+-- محصول ۳۷: کباب برگ (food_id = 37) - در سفارشات 2, 6, 21, 26
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(3, 37, 5, 'کباب برگش واقعا آبدار و خوشمزه بود. کیفیت گوشتش مشخصه.', 'بله، از بهترین فیله استفاده میشه. ممنونیم.', '2026-04-17 10:00:00', 1, TRUE),
+(7, 37, 4, 'طعم و بافت کباب خوب بود، ولی یکم زیادی برشته شده بود.', NULL, NULL, NULL, TRUE),
+(8, 37, 5, 'بهترین کباب برگی که تا حالا خوردم. دست مریزاد.', 'سلامت باشید. نظرتون باعث افتخار ماست.', '2026-04-27 18:30:00', 1, TRUE),
+(8, 37, 4, 'گوشت عالی بود. فقط سایز پرسش یکم کوچیک به نظر میرسید.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۳۸: جوجه کباب با استخوان (food_id = 38) - در سفارشات 6, 11, 17
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(7, 38, 4, 'جوجه کباب خوش طعم و آبدار بود، زعفرونش هم خوب بود.', NULL, NULL, NULL, TRUE),
+(12, 38, 5, 'فوق‌العاده مزه‌دار و آبدار. بهترین جوجه‌ایه که خوردم.', 'این بهترین تعریف برای یه جوجه کبابه! ممنون.', '2026-04-25 09:00:00', 1, TRUE),
+(18, 38, 4, 'جوجه‌ها درشت و خوشمزه بودن، واقعاً سیر شدم.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۳۹: جوجه کباب بدون استخوان (food_id = 39) - در سفارشات 16
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(16, 39, 4, 'جوجه بدون استخوانش خیلی راحت خورده میشه و طعم خوبی داره.', 'مخصوصاً برای بچه‌ها و آدمای عجول عالیه!', '2026-05-01 10:30:00', 1, TRUE),
+(16, 39, 5, 'عالی و بی‌نظیر. فیله مرغ کاملاً تازه و آبدار بود.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۴۰: کباب بختیاری (food_id = 40) - در سفارشات 14
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(15, 40, 4, 'کباب بختیاریش ترکیب خوبی بود، هم مرغش خوب بود هم گوشتش.', NULL, NULL, NULL, TRUE),
+(15, 40, 5, 'سیخ بختیاری عالی بود. گوشت و مرغ هر دو باکیفیت و تازه.', 'بله، ترکیب فیله گوساله و جوجه مرغ هست. ممنون از نظرتون.', '2026-04-28 19:15:00', 1, TRUE);
+
+-- محصول ۴۱: کباب کوبیده (food_id = 41) - در سفارشات 3, 7, 9, 12, 18, 26
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(5, 41, 5, 'کباب کوبیده‌شون نرم و آبداره، بهترین گزینه‌ست.', 'صد در صد. خوشحالیم که دوست دارید.', '2026-04-18 21:00:00', 1, TRUE),
+(8, 41, 4, 'کباب کوبیده خوبی بود، شاید یکم پیازش زیاد بود ولی در کل عالی.', NULL, NULL, NULL, TRUE),
+(10, 41, 4, 'کباب کوبیده نرم و لطیف بود. خیلی خوشم خورد.', NULL, NULL, NULL, TRUE),
+(13, 41, 4, 'ریزه کاری داره ولی به دلم نشست.', NULL, NULL, NULL, TRUE),
+(19, 41, 3, 'خوب بود ولی انگار یکم شور شده بود.', NULL, NULL, NULL, TRUE),
+(8, 41, 5, 'کوبیده‌شون یه چیز دیگه‌ست. هرجا میرم بازم یاد این کوبیده میوفتم.', 'چه نظر قشنگی. منتظریم دوباره بیایید.', '2026-05-03 19:00:00', 1, TRUE);
+
+-- محصول ۴۲: شیشلیک (food_id = 42) - در سفارشات 9, 21
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(10, 42, 5, 'شیشلیکش عالی بود، دنده گوسفندی خیلی خوشمزه و نرم.', 'بهترین دنده‌ها رو برای شیشلیک استفاده می‌کنیم.', '2026-04-26 14:00:00', 1, TRUE),
+(3, 42, 4, 'پختش عالی بود، جای کمی برای بهتر شدن داره.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۴۳: چنجه گوسفندی (food_id = 43) - در سفارشات 19, 29
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(13, 43, 5, 'چنجه گوسفندیش رو یه بار دیگه هم خوردم، بی‌نظیره و فوق‌العاده مزه‌داره.', 'ممنون از وفاداری‌تون. همیشه خوشحالمون میکنید.', '2026-04-27 13:30:00', 1, TRUE),
+(13, 43, 3, 'این دفعه یه ذره گوشتش سفت بود، ولی مزه‌اش خوب بود.', NULL, NULL, NULL, TRUE),
+(15, 43, 5, 'بی‌نظیر. فوق‌العاده طعم دودی و خوبی داشت.', NULL, NULL, NULL, TRUE);
+
+-- محصول ۴۵: چنجه گوسفندی (food_id = 45) - در سفارشات 13
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(14, 45, 4, 'چنجه گوسفندی بافت و طعم خیلی خوبی داشت.', NULL, NULL, NULL, TRUE),
+(14, 45, 5, 'عالی و بی‌نظیر بود. طعم لذیذی داشت.', 'ممنون، سلامت باشید.', '2026-05-02 20:00:00', 1, TRUE);
+
+-- محصول ۴۸: ماهی کبابی (food_id = 48) - در سفارشات 22
+INSERT INTO reviews (user_id, food_id, rating, comment, admin_reply, admin_reply_date, replied_by, is_approved) VALUES
+(4, 48, 4, 'ماهی کبابی خوشمزه‌ای بود، سیر و لیموش خیلی بهش میومد.', NULL, NULL, NULL, TRUE),
+(4, 48, 3, 'ماهی یه خورده خشک شده بود ولی طعمش خوب بود.', NULL, NULL, NULL, TRUE);

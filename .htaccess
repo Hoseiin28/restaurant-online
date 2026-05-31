@@ -1,0 +1,21 @@
+# .htaccess
+Options -Indexes
+
+# جلوگیری از دسترسی به فایل‌های حساس
+<FilesMatch "\.(env|sql|log|ini)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# تنظیم صفحه اصلی
+DirectoryIndex index.php
+
+# فعال‌سازی URL rewriting (اختیاری)
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# محافظت از پوشه‌های حساس
+RewriteRule ^config/ - [F,L]
+RewriteRule ^includes/ - [F,L]
